@@ -6,7 +6,7 @@ import java.util.*;
 import javax.swing.JOptionPane;
 
 public class FileListingApp {
-    static int count = 0;
+    static int count = 1;
 
     static void listFiles(String s1 , ArrayList aL){                //recursive function..
         File root = new File(s1.trim());
