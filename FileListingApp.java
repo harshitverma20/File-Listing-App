@@ -6,6 +6,7 @@ import java.util.*;
 import javax.swing.JOptionPane;
 
 public class FileListingApp {
+    static int count = 0;
 
     static void listFiles(String s1 , ArrayList aL){                //recursive function..
         File root = new File(s1.trim());
@@ -13,8 +14,10 @@ public class FileListingApp {
         
         for( int i=0 ; i<f.length ; i++)
         {
-            if(f[i].isFile())
-                aL.add(f[i].getAbsolutePath());
+            if(f[i].isFile()){
+                aL.add(count+") Name : "+f[i].getName()+", Path : "+f[i].getAbsolutePath());
+                count++;
+            }
             
             else
                 if(f[i].isDirectory())
