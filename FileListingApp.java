@@ -61,7 +61,7 @@ public class FileListingApp {
                Iterator it = aL.iterator();
                while(it.hasNext()){
                    bw.write(String.valueOf(it.next()));
-                   bw.nextLine();
+                   bw.newLine();
                }
             Component cmpnt = null;
              JOptionPane.showMessageDialog(cmpnt, "Operation Successful \n All files listed to : "+f2.getAbsolutePath());
